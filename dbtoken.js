@@ -3,5 +3,4 @@ dbtoken = {
     dbpassword: process.env.DB_PASSWORD,
     dbname: process.env.DB_NAME
 }
-
 module.exports = { dbtoken }
