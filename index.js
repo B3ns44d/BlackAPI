@@ -11,6 +11,7 @@ let mongoose = require('mongoose');
 let app = express();
 
 // ! Import routes
+let apiRoutes = require("./api-routes");
 // ! Configure bodyboarder to handle post requests
 app.use(bodyParser.urlencoded({
     extended: true
@@ -37,6 +38,7 @@ var port = process.env.PORT || 3448;
 app.get('/', (req, res) => res.send('Hello World with Express'));
 
 // ! Use Api routes in the App
+app.use('/api', apiRoutes); // ? <== here wer all the magic happened
 // ! Launch app to listen to specified port
 app.listen(port, function () {
     console.log("App Running on port " + port);
