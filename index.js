@@ -2,6 +2,7 @@
 let express = require('express');
 // ? import db token info
 let dbinfo = require('./dbtoken');
+require('dotenv').config();
 let apiDB = dbinfo; // ? <== db info
 // ! Import Body parser
 let bodyParser = require('body-parser');
@@ -19,7 +20,8 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 // ! Connect to Mongoose and set connection variable
 // ! Mongoose connection
-mongoose.connect(`mongodb://${apiDB.dbtoken.dbusername}:${apiDB.dbtoken.dbpassword}@cluster0-shard-00-00.dvwwd.mongodb.net:27017,cluster0-shard-00-01.dvwwd.mongodb.net:27017,cluster0-shard-00-02.dvwwd.mongodb.net:27017/${apiDB.dbtoken.dbname}?ssl=true&replicaSet=atlas-3qd9xr-shard-0&authSource=admin&retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true})
+// !!! here im using Config Vars from my server which means that u can't see the values of if
+mongoose.connect(`mongodb://${apiDB.dbtoken.dbusername || process.env.DB_USERNAME}:${apiDB.dbtoken.dbpassword || process.env.DB_PASSWORD}@cluster0-shard-00-00.dvwwd.mongodb.net:27017,cluster0-shard-00-01.dvwwd.mongodb.net:27017,cluster0-shard-00-02.dvwwd.mongodb.net:27017/${apiDB.dbtoken.dbname || process.env.DB_NAME}?ssl=true&replicaSet=atlas-3qd9xr-shard-0&authSource=admin&retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true})
 
 
 var db = mongoose.connection;
