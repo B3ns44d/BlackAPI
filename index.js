@@ -42,7 +42,11 @@ else console.log("Db connected successfully");
 var port = process.env.PORT || 3448;
 
 // ! Send message for default URL
-app.get("/", (req, res) => res.send(`id: ${req.query.id}\n ===> try to enter ?id="Hello B3ns44d" in the URL after .com or your port ==> ${port}/ \r\n ex: ....com/?id="Hello BLACK"`));
+app.get("/", (req, res) =>
+  res.send(
+    `id: ${req.query.id}\n ===> try to enter ?id="Hello B3ns44d" in the URL after .com or your port ==> ${port}/ \r\n ex: ....com/?id="Hello BLACK"`
+  )
+);
 // ! Use Api routes in the App
 app.use("/api", apiRoutes); // ? <== here wer all the magic happened
 // ! Launch app to listen to specified port
