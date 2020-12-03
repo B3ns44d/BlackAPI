@@ -9,6 +9,10 @@ var datalistSchema = mongoose.Schema({
     type: String,
     require: true,
   },
+  time: {
+      type: Number,
+      require: true
+  },
   type: {
     type: String,
     require: true,

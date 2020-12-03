@@ -28,6 +28,7 @@ exports.new = function (req, res) {
   item.description = req.body.description;
   item.imgUrl = req.body.imgUrl;
   item.rate = req.body.rate;
+  item.time = req.body.time;
   // ! save the item and check for errors
   item.save(function (err) {
     // ! Check for validation error
@@ -60,6 +61,7 @@ exports.update = function (req, res) {
     item.description = req.body.description;
     item.imgUrl = req.body.imgUrl;
     item.rate = req.body.rate;
+    item.time = req.body.time;
     // ! save the item and check for errors
     item.save(function (err) {
       if (err) res.json(err);
