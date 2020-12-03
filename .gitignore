@@ -3,3 +3,5 @@ node_modules
 # dbtoken.js
 .env
 keys.js
+
+query.js
