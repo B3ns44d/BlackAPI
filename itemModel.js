@@ -10,7 +10,7 @@ var datalistSchema = mongoose.Schema({
     require: true,
   },
   time: {
-      type: Number,
+      type: String,
       require: true
   },
   type: {
@@ -42,6 +42,6 @@ module.exports.get = function (callback, limit) {
       1  ==> Very Boring
       2  ==> Not so dusty!
       3  ==> Wonderful
-      3  ==> Very cool
+      4  ==> Very cool
       5  ==> Just WOW
     */
