@@ -12,6 +12,14 @@ let mongoose = require("mongoose");
 let app = express();
 // ! Import routes
 let apiRoutes = require("./api-routes");
+
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+// app.use(auth(config)); 
+
+// req.isAuthenticated is provided from the auth router
+
+
 // ! Configure bodyboarder to handle post requests
 app.use(
   bodyParser.urlencoded({
@@ -40,6 +48,12 @@ else console.log("Db connected successfully");
 
 // ! Setup server port
 var port = process.env.PORT || 3448;
+
+
+// !!! <=== auth0 config not work anymore
+// app.get('/', (req, res) => {
+//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+// });
 
 // ! Send message for default URL
 app.get("/", (req, res) =>
