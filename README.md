@@ -32,7 +32,9 @@ I am creating this **API** for my next **current project** which is a platform (
 <a href="https://www.linkedin.com/in/b3ns44d/" target="_blank">
 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 </p>
-## ❤ Funding 🔝
+
+
+## Funding 🖤
 
 **If you want to support me to do more projects and develop myself, I would be grateful to you** 
 
