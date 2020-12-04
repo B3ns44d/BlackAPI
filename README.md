@@ -33,7 +33,9 @@ I am creating this **API** for my next **current project** which is a platform (
 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 </p>
 ## ❤ Funding 🔝
+
 **If you want to support me to do more projects and develop myself, I would be grateful to you** 
+
 <a href="https://ko-fi.com/b3ns44d" target="_blank">
 <img src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white"/>
 </a>
